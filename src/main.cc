@@ -9,7 +9,9 @@ int main(int argc, char*argv[]) {
       if(event.type == sf::Event::Closed) {
         window.close();
       }
-      window.display();
     }
+    window.display();
   }
+
+  return 0;
 }
