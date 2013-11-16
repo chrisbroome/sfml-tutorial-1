@@ -34,12 +34,15 @@ SRCS := $(wildcard $(SRCDIR)/*$(SRCEXT))
 OBJS := $(SRCS:$(SRCDIR)/%$(SRCEXT)=$(OBJDIR)/%$(OBJEXT))
 DEPS := $(OBJS:$(OBJDIR)/%$(OBJEXT)=$(OBJDIR)/%.d)
 
-.PHONY: all all-before all-after clean clean-custom
+.PHONY: all all-before all-after clean clean-custom run
 
 all: all-before $(TARGET) all-after
 
 clean: clean-custom
 	$(RM) $(OBJS) $(DEPS) $(TARGET)
+
+run: $(TARGET)
+	@$(TARGET)
 
 $(TARGET): $(OBJS)
 	@echo "[LINK] $@"
