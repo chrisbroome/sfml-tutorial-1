@@ -1,3 +1,3 @@
 sfml-tutorial-1
 ===============
-Set of commits for learning about various parts of the SFML library.
+Demo project for learning the [SFML](http://www.sfml-dev.org/) library.
